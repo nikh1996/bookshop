@@ -11,6 +11,14 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+var port = process.env.PORT || process.env.port || process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var ip = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
+var nodeEnv = process.env.NODE_ENV || 'unknown';
+
+app.listen(port, ip, function () {
+    console.log( "Listening on " + ip + ", Server Port " + port  );
+});
+
 app.use(compression());
 app.use(helmet());
 
