@@ -4,85 +4,97 @@
 	<% include header.ejs %>
 
 	<style>
-	.card-pad {
-		padding:10%;
+	body {
+		background: url('/images/login_back.jpg');
 	}
 
-	.circle_card {
-		border-radius: 50%;
-		width: 200px !important;
-		height: 200px !important;
-		-moz-transition: all 0.3s;
-		-webkit-transition: all 0.3s;
-		transition: all 0.3s;
+	.row {
+		margin-bottom: 5px;
 	}
 
-	.circle_card:hover {
-		-moz-transform: scale(1.1);
-		-webkit-transform: scale(1.1);
-		transform: scale(1.1);
+	input[type=password]:not(.browser-default), input[type=text]:not(.browser-default) {
+		border-bottom: 1px solid #000;
 	}
 
-	.circle_card_big {
-		border-radius: 50%;
-		width: 500px !important;
-		height: 500px !important;
+	input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]) {
+		border-bottom: 1px solid #000;
+		box-shadow: 0 0.3px 0 0 #000;
 	}
 
-	.text-margin {
-		position:relative;
-		top:25%;
+	input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label {
+		color: #000;
 	}
 
-	.circle_text {
-		position:relative;
-		top:30%;
-		left:20%;
+	.input-field>label, .input-field .prefix.active {
+		color: #000;
 	}
+
 </style>
 </head>
+<% include loading.ejs %>
 <body>
-	<div id="loading">
-		<img id="loading-image" src="images/loading.gif" alt="Loading..." />
-	</div>
 	<div class="container">
-		<div class="row" style="margin-top:10%;">
-			<div class="col s6">
-				<div class="card hoverable circle_card_big">
-					<div style="padding-top:12%">
-						<div class="row">
-							<h2 class="cur_font center-align text-margin">Login</h2>
-						</div>
-						<div class="row">
-							<div class="col s1"></div>
-							<div class="col s10">
-								<div class="input-field col s12">
-									<input id="email" type="email" class="validate">
-									<label for="email">Email</label>
-								</div>
+		<form action="">
+			<div class="row" style="margin-top:22%;">
+				<div class="col s3"></div>
+				<div class="col s6">
+					<div class="card transparent_card hoverable circle_card_big" style="margin-left:14%;">
+						<div style="padding-top:12%">
+							<div class="row">
+								<h2 class="cur_font center-align text-margin">Login</h2>
 							</div>
-							<div class="col s1"></div>
+							<div class="row">
+								<div class="col s1"></div>
+								<div class="col s10">
+									<div class="input-field col s12">
+										<i class="material-icons prefix">face</i>
+										<input id="text" type="text" class="text_fields" style="font-weight: bold;">
+										<label for="text" class="login_font">Username</label>
+									</div>
+								</div>
+								<div class="col s1"></div>
+							</div>
+							<div class="row">
+								<div class="col s1"></div>
+								<div class="col s10">
+									<div class="input-field col s12">
+										<i class="material-icons prefix">lock</i>
+										<input id="password" type="password">
+										<label for="password" class="login_font">Password</label>
+									</div>
+								</div>
+								<div class="col s1"></div>
+							</div>
+							<div class="row">
+								<div class="col s3"></div>
+								<div class="col s8">
+									<div class=" hvr-icon-wobble-vertical">
+										<button class="btn waves-effect waves-light hvr-icon" type="submit" name="submit">Submit
+											<i class="material-icons right hvr-icon">send</i>
+										</button>&nbsp;&nbsp;&nbsp;
+									</div>
+									<div class=" hvr-icon-wobble-vertical">
+										<a href="/">
+											<button class="btn waves-effect waves-light red hvr-icon" type="reset" name="reset">Cancel
+												<i class="material-icons right hvr-icon">close</i>
+											</button>
+										</a>
+									</div>
+								</div>
+								<div class="col s3"></div>
+							</div>
 						</div>
 					</div>
 				</div>
+				<div class="col s3" style="margin-top:30%; margin-left: -5%">
+					<a href="/register">
+						<div class="waves-effect waves-orange card hoverable circle_card small transparent_card hvr-buzz" style="margin-left:0%;">
+							<h4 class="cur_font circle_text">Sign Up</h4>
+						</div>
+					</a>
+				</div>
 			</div>
-		</div>
+		</form>
 	</div>
 </body>
-<script>
-	$(document).ready(function() {
-		$('a').click(function(e) {
-			e.preventDefault();
-			newLocation = this.href;
-			console.log(newLocation);
-			$('#loading').fadeIn('slow').delay(1000, newpage);	
-		});
-
-		function newpage() {
-			window.location = newLocation;
-		}
-
-		$('#loading').delay(0).fadeOut('slow');	
-	});
-</script>
 </html>

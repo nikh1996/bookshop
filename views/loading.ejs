@@ -1,0 +1,21 @@
+<body>
+	<div id="loading">
+		<img id="loading-image" src="images/loading.gif" alt="Loading..." />
+	</div>
+</body>
+<script>
+	$(document).ready(function() {
+		$('a').click(function(e) {
+			e.preventDefault();
+			newLocation = this.href;
+			console.log(newLocation);
+			$('#loading').fadeIn('slow').delay(1000, newpage);	
+		});
+
+		function newpage() {
+			window.location = newLocation;
+		}
+
+		$('#loading').delay(0).fadeOut('slow');	
+	});
+</script>

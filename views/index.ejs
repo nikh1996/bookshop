@@ -4,65 +4,31 @@
 	<% include header.ejs %>
 
 	<style>
-	.card-pad {
-		padding:10%;
-	}
-
-	.circle_card {
-		border-radius: 50%;
-		width: 200px !important;
-		height: 200px !important;
-		-moz-transition: all 0.3s;
-		-webkit-transition: all 0.3s;
-		transition: all 0.3s;
-	}
-
-	.circle_card:hover {
-		-moz-transform: scale(1.1);
-		-webkit-transform: scale(1.1);
-		transform: scale(1.1);
-	}
-
-	.circle_card_big {
-		border-radius: 50%;
-		width: 500px !important;
-		height: 500px !important;
-	}
-
-	.text-margin {
-		position:relative;
-		top:25%;
-	}
-
-	.circle_text {
-		position:relative;
-		top:30%;
-		left:20%;
+	body {
+		background: url('/images/book_back.gif');
 	}
 </style>
 </head>
+<% include loading.ejs %>
 <body>
-	<div id="loading">
-		<img id="loading-image" src="images/loading.gif" alt="Loading..." />
-	</div>
 	<div class="container">
-		<div class="row" style="margin-top:10%;">
-			<div class="col s3" style="margin-top:15%;">
+		<div class="row" style="margin-top:15%;margin-left:5%;">
+			<div class="col s3" style="margin-top:12%;">
 				<a href="/login">
-					<div class="waves-effect waves-yellow card hoverable circle_card small transparent_card">
+					<div class="waves-effect waves-yellow card hoverable circle_card small transparent_card hvr-login hvr-buzz">
 						<h4 class="cur_font circle_text">&nbsp;Login</h4>
 					</div>
 				</a>
 			</div>
 			<div class="col s6">
-				<div class="waves-effect waves-light card hoverable circle_card_big transparent_card">
+				<div class="waves-effect pulse waves-light card hoverable circle_card_big transparent_card">
 					<h2 class="cur_font center-align text-margin"><%= title %></h2>
 					<p class="cur_font center-align text-margin">A place for all things books</p>
 				</div>
 			</div>
-			<div class="col s3" style="margin-top:15%;">
+			<div class="col s3" style="margin-top:12%;">
 				<a href="/register">
-					<div class="waves-effect waves-orange card hoverable circle_card small transparent_card" style="margin-left:15%;">
+					<div class="waves-effect waves-orange card hoverable circle_card small transparent_card hvr-signup hvr-buzz" style="margin-left:0%;">
 						<h4 class="cur_font circle_text">Sign Up</h4>
 					</div>
 				</a>
@@ -70,20 +36,4 @@
 		</div>
 	</div>
 </body>
-<script>
-	$(document).ready(function() {
-		$('a').click(function(e) {
-			e.preventDefault();
-			newLocation = this.href;
-			console.log(newLocation);
-			$('#loading').fadeIn('slow').delay(1000, newpage);	
-		});
-
-		function newpage() {
-			window.location = newLocation;
-		}
-
-		$('#loading').delay(0).fadeOut('slow');	
-	});
-</script>
 </html>
