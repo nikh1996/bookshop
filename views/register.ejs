@@ -4,71 +4,144 @@
 	<% include header.ejs %>
 
 	<style>
-	.card-pad {
-		padding:10%;
+	.card_pad {
+		padding: 2% 0;
 	}
 
-	.circle_card {
-		border-radius: 50%;
-		width: 200px !important;
-		height: 200px !important;
-		-moz-transition: all 0.3s;
-		-webkit-transition: all 0.3s;
-		transition: all 0.3s;
-	}
-
-	.circle_card:hover {
-		-moz-transform: scale(1.1);
-		-webkit-transform: scale(1.1);
-		transform: scale(1.1);
-	}
-
-	.circle_card_big {
-		border-radius: 50%;
-		width: 500px !important;
-		height: 500px !important;
-	}
-
-	.text-margin {
-		position:relative;
-		top:25%;
-	}
-
-	.circle_text {
-		position:relative;
-		top:30%;
-		left:20%;
+	.input-field {
+		margin: 0.5rem 0;
 	}
 </style>
 </head>
+<% include loading.ejs %>
 <body>
-	<div id="loading">
-		<img id="loading-image" src="images/loading.gif" alt="Loading..." />
-	</div>
 	<div class="container">
-		<div class="row" style="margin-top:10%;">
-			<div class="col s6">
-				<div class="waves-effect waves-light card hoverable circle_card_big transparent_card">
-					<p class="cur_font center-align text-margin">A place for all things books</p>
+		<form action="">
+			<div class="row">
+				<div class="col s3"></div>
+				<div class="col s6">
+					<div class="card card_pad transparent_card hoverable" style="margin-left:14%;">
+						<div>
+							<div class="row">
+								<h2 class="cur_font center-align text-margin">Register</h2>
+							</div>
+							<div class="row">
+								<div class="col s1"></div>
+								<div class="col s10">
+									<div class="input-field col s12">
+										<i class="material-icons prefix">face</i>
+										<input id="name" type="text" name="name" class="text_fields" style="font-weight: bold;">
+										<label for="name" class="login_font">Name</label>
+									</div>
+								</div>
+								<div class="col s1"></div>
+							</div>
+							<div class="row">
+								<div class="col s1"></div>
+								<div class="col s10">
+									<div class="input-field col s12">
+										<i class="fas fa-venus-mars prefix"></i>
+										<select id="gender" name="gender" class="icons">
+											<option value="#" disabled selected>Choose your option</option>
+											<option value="male" data-icon="images/male.png">Male</option>
+											<option value="female" data-icon="images/female.png">Female</option>
+											<option value="other" data-icon="images/other.png">Other</option>
+										</select>
+										<label for="gender" class="login_font">Gender</label>
+									</div>
+								</div>
+								<div class="col s1"></div>
+							</div>
+							<div class="row">
+								<div class="col s1"></div>
+								<div class="col s10">
+									<div class="row" style="margin:0;">
+										<div class="col s1"></div>
+										<div class="col s10">
+											<label for="dob" class="login_font">&nbsp;&nbsp;&nbsp;Date of Birth</label>
+										</div>
+									</div>
+									<div class="input-field col s12" style="margin-top:0;">
+										<i class="material-icons prefix">perm_contact_calendar</i>
+										<input type="text" class="datepicker" name="dob">
+									</div>
+								</div>
+								<div class="col s1"></div>
+							</div>
+							<div class="row">
+								<div class="col s1"></div>
+								<div class="col s10">
+									<div class="input-field col s12">
+										<i class="material-icons prefix">face</i>
+										<input id="username" type="text" class="text_fields" style="font-weight: bold;">
+										<label for="username" class="login_font">Username</label>
+									</div>
+								</div>
+								<div class="col s1"></div>
+							</div>
+							<div class="row">
+								<div class="col s1"></div>
+								<div class="col s10">
+									<div class="input-field col s12">
+										<i class="material-icons prefix">lock</i>
+										<input id="password" type="password">
+										<label for="password" class="login_font">Password</label>
+									</div>
+								</div>
+								<div class="col s1"></div>
+							</div>
+							<div class="row">
+								<div class="col s1"></div>
+								<div class="col s10">
+									<div class="input-field col s12">
+										<i class="material-icons prefix">vpn_key</i>
+										<input id="conf_password" type="password">
+										<label for="conf_password" class="login_font">Confirm Password</label>
+									</div>
+								</div>
+								<div class="col s1"></div>
+							</div>
+							<div class="row">
+								<div class="col s1"></div>
+								<div class="col s10">
+									<div class="input-field col s12">
+										<i class="material-icons prefix">email</i>
+										<input id="email" type="email" class="text_fields" style="font-weight: bold;">
+										<label for="email" class="login_font">Email</label>
+									</div>
+								</div>
+								<div class="col s1"></div>
+							</div>
+							<div class="row">
+								<div class="col s3"></div>
+								<div class="col s8">
+									<div class=" hvr-icon-wobble-vertical">
+										<button class="btn waves-effect waves-light hvr-icon" type="submit" name="submit">Submit
+											<i class="material-icons right hvr-icon">send</i>
+										</button>&nbsp;&nbsp;&nbsp;
+									</div>
+									<div class=" hvr-icon-wobble-vertical">
+										<a href="/">
+											<button class="btn waves-effect waves-light red hvr-icon" type="reset" name="reset">Cancel
+												<i class="material-icons right hvr-icon">close</i>
+											</button>
+										</a>
+									</div>
+								</div>
+								<div class="col s3"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s3" style="margin-top:30%; margin-left: -5%">
+					<a href="/login">
+						<div class="waves-effect waves-yellow card hoverable circle_card small transparent_card hvr-login hvr-buzz">
+							<h4 class="cur_font circle_text">&nbsp;Login</h4>
+						</div>
+					</a>
 				</div>
 			</div>
-		</div>
+		</form>
 	</div>
 </body>
-<script>
-	$(document).ready(function() {
-		$('a').click(function(e) {
-			e.preventDefault();
-			newLocation = this.href;
-			console.log(newLocation);
-			$('#loading').fadeIn('slow').delay(1000, newpage);	
-		});
-
-		function newpage() {
-			window.location = newLocation;
-		}
-
-		$('#loading').delay(0).fadeOut('slow');	
-	});
-</script>
 </html>
