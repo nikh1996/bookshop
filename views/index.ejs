@@ -2,34 +2,47 @@
 <html>
 <head>
 	<% include header.ejs %>
-
-	<style>
-	body {
-		background: url('/images/book_back.gif');
-	}
-</style>
+	<link rel='stylesheet' href='/stylesheets/index.css' />
 </head>
 <% include loading.ejs %>
-<body>
+<body class="index_back">
 	<div class="container">
-		<div class="row" style="margin-top:15%;margin-left:5%;">
-			<div class="col s3" style="margin-top:12%;">
+		<div class="row index_margin">
+			<div class="col s4 m3 l3 xl3 index_col_margin hide_portrait">
 				<a href="/login">
 					<div class="waves-effect waves-yellow card hoverable circle_card small transparent_card hvr-login hvr-buzz">
-						<h4 class="cur_font circle_text">&nbsp;Login</h4>
+						<h4 class="cur_font circle_text h4_index_font center-align">&nbsp;Login</h4>
 					</div>
 				</a>
 			</div>
-			<div class="col s6">
+			<div class="col s4 m6 l6 xl6">
 				<div class="waves-effect pulse waves-light card hoverable circle_card_big transparent_card">
-					<h2 class="cur_font center-align text-margin"><%= title %></h2>
+					<h2 class="cur_font center-align text-margin h2_index_font"><%= title %></h2>
 					<p class="cur_font center-align text-margin">A place for all things books</p>
 				</div>
 			</div>
-			<div class="col s3" style="margin-top:12%;">
+			<div class="col s4 m3 l3 xl3 center-align index_col_margin hide_portrait">
 				<a href="/register">
 					<div class="waves-effect waves-orange card hoverable circle_card small transparent_card hvr-signup hvr-buzz" style="margin-left:0%;">
-						<h4 class="cur_font circle_text">Sign Up</h4>
+						<h4 class="cur_font circle_text h4_index_font">&nbsp;Sign Up</h4>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="row vis_portrait_only">
+			<div class="col m2"></div>
+			<div class="col s4 m3 l3 xl3">
+				<a href="/login">
+					<div class="waves-effect waves-yellow card hoverable circle_card small transparent_card hvr-login hvr-buzz">
+						<h4 class="cur_font circle_text h4_index_font center-align">&nbsp;Login</h4>
+					</div>
+				</a>
+			</div>
+			<div class="col m2"></div>
+			<div class="col s4 m3 l3 xl3 center-align">
+				<a href="/register">
+					<div class="waves-effect waves-orange card hoverable circle_card small transparent_card hvr-signup hvr-buzz" style="margin-left:0%;">
+						<h4 class="cur_font circle_text h4_index_font">&nbsp;Sign Up</h4>
 					</div>
 				</a>
 			</div>

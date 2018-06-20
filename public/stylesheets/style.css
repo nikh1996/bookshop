@@ -4,8 +4,10 @@ a {
 
 body {
 	background-repeat: no-repeat !important;
-	background-size: cover !important;
-	overflow: hidden; 
+  -webkit-background-size: 100% !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
 }
 
 .cur_font {
@@ -77,7 +79,6 @@ body {
 .circle_text {
 	position:relative;
 	top:30%;
-	left:20%;
 }
 
 /*Login effect*/
@@ -156,4 +157,87 @@ body {
 .hvr-signup:hover:before, .hvr-signup:focus:before, .hvr-signup:active:before {
   -webkit-transform: scale(2);
   transform: scale(2);
+}
+
+@media only screen and (min-device-width: 1px) and (max-device-width: 767px) and (orientation:portrait) {
+
+}
+
+@media only screen and (min-device-width: 1px) and (max-device-width: 767px) and (orientation:landscape) {
+  .circle_card {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .circle_card_big {
+    width: 350px !important;
+    height: 350px !important;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 812px) and (orientation:landscape) {
+  .circle_card {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .circle_card_big {
+    width: 350px !important;
+    height: 350px !important;
+  }
+
+  .circle_text {
+    top: 25%;
+  }
+
+  .h4_index_font {
+    font-size: 1.8rem;
+  }
+
+  .h2_index_font {
+    font-size: 3rem;
+  }
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 768px) and (orientation:portrait) {}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation:portrait) {}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation:landscape) {
+  .circle_card {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .circle_card_big {
+    width: 400px !important;
+    height: 400px !important;
+  }
+
+  .circle_text {
+    top: 25%;
+  }
+
+  .h4_index_font {
+    font-size: 1.8rem;
+  }
+
+  .h2_index_font {
+    font-size: 3rem;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation:landscape) {
+  .circle_text {
+    top: 30%;
+  }
+
+  .container {
+    width: 90%;
+  }
 }
