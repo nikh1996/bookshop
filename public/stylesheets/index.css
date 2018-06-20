@@ -14,10 +14,6 @@
   overflow: hidden;
 }
 
-.vis_portrait_only {
-  display:none;
-}
-
 @media only screen and (min-device-width: 1px) and (max-device-width: 767px) and (orientation:portrait) {
   .index_margin {
     margin-left:20%;
@@ -27,13 +23,6 @@
     background: url('/images/index_por.jpg');
   }
 
-  .hide_portrait {
-    display:none;
-  }
-
-  .vis_portrait_only {
-    display:block;
-  }
 }
 
 @media only screen and (min-device-width: 1px) and (max-device-width: 767px) and (orientation:landscape) {
@@ -108,14 +97,6 @@
     background: url('/images/index_por.jpg');
   }
 
-  .hide_portrait {
-    display:none;
-  }
-
-  .vis_portrait_only {
-    display:block;
-  }
-
   .index_margin {
     margin-left:20%;
   }
@@ -124,14 +105,6 @@
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation:portrait) {
   .index_back {
     background: url('/images/index_por.jpg');
-  }
-
-  .hide_portrait {
-    display:none;
-  }
-
-  .vis_portrait_only {
-    display:block;
   }
 
   .index_margin {
@@ -178,7 +151,7 @@
 
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation:landscape) {
   .index_margin {
-    margin-top:10%;
+    margin-top:5%;
     margin-left:5%;
   }
 
