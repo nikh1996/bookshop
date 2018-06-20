@@ -8,6 +8,12 @@ body {
   -moz-background-size: cover !important;
   -o-background-size: cover !important;
   background-size: cover !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .cur_font {

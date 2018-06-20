@@ -2,25 +2,16 @@
 <html>
 <head>
 	<% include header.ejs %>
-
-	<style>
-	.card_pad {
-		padding: 2% 0;
-	}
-
-	.input-field {
-		margin: 0.5rem 0;
-	}
-</style>
+	<link rel='stylesheet' href='/stylesheets/register.css' />
 </head>
 <% include loading.ejs %>
-<body>
+<body class="reg_back">
 	<div class="container">
 		<form action="">
 			<div class="row">
-				<div class="col s3"></div>
-				<div class="col s6">
-					<div class="card card_pad transparent_card hoverable" style="margin-left:14%;">
+				<div class="col s4 m2 l2 xl3"></div>
+				<div class="col s4 m8 l8 xl6">
+					<div class="card card_pad transparent_card hoverable">
 						<div>
 							<div class="row">
 								<h2 class="cur_font center-align text-margin">Register</h2>
@@ -29,7 +20,7 @@
 								<div class="col s1"></div>
 								<div class="col s10">
 									<div class="input-field col s12">
-										<i class="material-icons prefix">face</i>
+										<i class="material-icons prefix">border_color</i>
 										<input id="name" type="text" name="name" class="text_fields" style="font-weight: bold;">
 										<label for="name" class="login_font">Name</label>
 									</div>
@@ -106,8 +97,9 @@
 								<div class="col s10">
 									<div class="input-field col s12">
 										<i class="material-icons prefix">email</i>
-										<input id="email" type="email" class="text_fields" style="font-weight: bold;">
+										<input id="email" type="email" class="validate text_fields" style="font-weight: bold;">
 										<label for="email" class="login_font">Email</label>
+										<span class="helper-text" data-error="Enter valid email!" data-success="Perfect!"></span>
 									</div>
 								</div>
 								<div class="col s1"></div>
@@ -133,7 +125,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col s3 center-align" style="margin-top:30%; margin-left: -5%">
+				<div class="col s4 m2 l2 xl3 center-align" style="margin-top:30%">
 					<a href="/login">
 						<div class="waves-effect waves-yellow card hoverable circle_card small transparent_card hvr-login hvr-buzz">
 							<h4 class="cur_font circle_text">&nbsp;Login</h4>

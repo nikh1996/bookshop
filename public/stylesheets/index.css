@@ -10,7 +10,7 @@
 }
 
 .index_back {
-  background: url('/images/index.gif');
+  background: url('/images/index_land.gif');
   overflow: hidden;
 }
 
@@ -24,7 +24,7 @@
   }
 
   .index_back {
-    background: url('/images/index_ph.jpg');
+    background: url('/images/index_por.jpg');
   }
 
   .hide_portrait {
@@ -105,7 +105,7 @@
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 768px) and (orientation:portrait) {
   .index_back {
-    background: url('/images/index_ph.jpg');
+    background: url('/images/index_por.jpg');
   }
 
   .hide_portrait {
@@ -123,7 +123,7 @@
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation:portrait) {
   .index_back {
-    background: url('/images/index_ph.jpg');
+    background: url('/images/index_por.jpg');
   }
 
   .hide_portrait {

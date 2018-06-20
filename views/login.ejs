@@ -2,38 +2,10 @@
 <html>
 <head>
 	<% include header.ejs %>
-
-	<style>
-	body {
-		background: url('/images/login_back.jpg');
-		overflow: hidden; 
-	}
-
-	.row {
-		margin-bottom: 5px;
-	}
-
-	input[type=password]:not(.browser-default), input[type=text]:not(.browser-default) {
-		border-bottom: 1px solid #000;
-	}
-
-	input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]) {
-		border-bottom: 1px solid #000;
-		box-shadow: 0 0.3px 0 0 #000;
-	}
-
-	input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label {
-		color: #000;
-	}
-
-	.input-field>label, .input-field .prefix.active {
-		color: #000;
-	}
-
-</style>
+	<link rel='stylesheet' href='/stylesheets/login.css' />
 </head>
 <% include loading.ejs %>
-<body>
+<body class="login_back">
 	<div class="container">
 		<form action="">
 			<div class="row" style="margin-top:22%;">

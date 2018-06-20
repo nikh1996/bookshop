@@ -1,6 +1,8 @@
 <body>
-	<div id="loading">
+	<div class="loading_div" id="loading">
+		<div class="loading_image">
 		<img id="loading-image" src="images/loading.gif" alt="Loading..." />
+		</div>
 	</div>
 </body>
 <script>
@@ -8,7 +10,6 @@
 		$('a').click(function(e) {
 			e.preventDefault();
 			newLocation = this.href;
-			console.log(newLocation);
 			$('#loading').fadeIn('slow').delay(1000, newpage);	
 		});
 

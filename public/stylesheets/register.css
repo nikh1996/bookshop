@@ -1,0 +1,50 @@
+/*Register page*/
+.reg_back {
+	background: url('/images/signup_land.jpg');
+}
+
+.card_pad {
+	padding: 2% 0;
+}
+
+.input-field {
+	margin: 0.5rem 0;
+}
+
+.transparent_card {
+	background: rgba(255,255,255,0.9);
+}
+
+@media only screen and (min-device-width: 1px) and (max-device-width: 767px) and (orientation:portrait) {
+	.reg_back {
+		background: url('/images/signup_por.jpg');
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 768px) and (orientation:portrait) {
+	.reg_back {
+		background: url('/images/signup_por.jpg');
+	}
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation:portrait) {
+	.reg_back {
+		background: url('/images/signup_por.jpg');
+	}
+}
+
+@media only screen and (min-device-width: 1px) and (max-device-width: 767px) and (orientation:landscape) {
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 812px) and (orientation:landscape) {
+
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation:landscape) {
+
+}
+
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation:landscape) {
+
+}

@@ -1,0 +1,64 @@
+/*Login page*/
+.login_back {
+	background: url('/images/login_land.jpg');
+	overflow: hidden; 
+}
+
+.row {
+	margin-bottom: 5px;
+}
+
+.transparent_card {
+	background: rgba(255,255,255,0.75);
+}
+
+input[type=password]:not(.browser-default), input[type=text]:not(.browser-default) {
+	border-bottom: 1px solid #000;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]) {
+	border-bottom: 1px solid #000;
+	box-shadow: 0 0.3px 0 0 #000;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label {
+	color: #000;
+}
+
+.input-field>label, .input-field .prefix.active {
+	color: #000;
+}
+
+@media only screen and (min-device-width: 1px) and (max-device-width: 767px) and (orientation:portrait) {
+	.login_back {
+		background: url('/images/login_por.jpg');
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 768px) and (orientation:portrait) {
+	.login_back {
+		background: url('/images/login_por.jpg');
+	}
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation:portrait) {
+	.login_back {
+		background: url('/images/login_por.jpg');
+	}
+}
+
+@media only screen and (min-device-width: 1px) and (max-device-width: 767px) and (orientation:landscape) {
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 812px) and (orientation:landscape) {
+
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation:landscape) {
+
+}
+
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation:landscape) {
+
+}
