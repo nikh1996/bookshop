@@ -5,9 +5,9 @@
 	<link rel='stylesheet' href='/stylesheets/register.css' />
 </head>
 <% include loading.ejs %>
-<body class="reg_back">
+<body class="reg_back" ng-app="Register" ng-controller="register">
 	<div class="container">
-		<form action="">
+		<form action="/user_db/register" method="post">
 			<div class="row login_card">
 				<div class="col s4 m2 l2 xl3"></div>
 				<div class="col s4 m8 l8 xl6">
@@ -64,7 +64,7 @@
 								<div class="col s10">
 									<div class="input-field col s12">
 										<i class="material-icons prefix">face</i>
-										<input id="username" type="text" class="text_fields" style="font-weight: bold;">
+										<input id="username" name="username" type="text" class="text_fields" style="font-weight: bold;">
 										<label for="username" class="login_font">Username</label>
 									</div>
 								</div>
@@ -75,7 +75,7 @@
 								<div class="col s10">
 									<div class="input-field col s12">
 										<i class="material-icons prefix">lock</i>
-										<input id="password" type="password">
+										<input id="password" name="password" type="password" ng-model="password">
 										<label for="password" class="login_font">Password</label>
 									</div>
 								</div>
@@ -86,8 +86,9 @@
 								<div class="col s10">
 									<div class="input-field col s12">
 										<i class="material-icons prefix">vpn_key</i>
-										<input id="conf_password" type="password">
+										<input id="conf_password" type="password" name="conf_password" ng-model="conf_password" ng-class="{true: 'valid', false: 'invalid'}[conf_password == password]">
 										<label for="conf_password" class="login_font">Confirm Password</label>
+										<span class="helper-text" ng-if="password!=null" data-error="Enter same password as above!" data-success="Perfect!"></span>
 									</div>
 								</div>
 								<div class="col s1"></div>
@@ -97,7 +98,7 @@
 								<div class="col s10">
 									<div class="input-field col s12">
 										<i class="material-icons prefix">email</i>
-										<input id="email" type="email" class="validate text_fields" style="font-weight: bold;">
+										<input id="email" type="email" name="email" class="validate text_fields" style="font-weight: bold;">
 										<label for="email" class="login_font">Email</label>
 										<span class="helper-text" data-error="Enter valid email!" data-success="Perfect!"></span>
 									</div>
@@ -108,13 +109,13 @@
 								<div class="col s3"></div>
 								<div class="col s8">
 									<div class=" hvr-icon-wobble-vertical">
-										<button class="btn waves-effect waves-light hvr-icon" type="submit" name="submit">Submit
+										<button class="btn waves-effect waves-light hvr-icon" type="submit">Submit
 											<i class="material-icons right hvr-icon">send</i>
 										</button>&nbsp;&nbsp;&nbsp;
 									</div>
 									<div class=" hvr-icon-wobble-vertical">
 										<a href="/">
-											<button class="btn waves-effect waves-light red hvr-icon" type="reset" name="reset">Cancel
+											<button class="btn waves-effect waves-light red hvr-icon" type="reset">Cancel
 												<i class="material-icons right hvr-icon">close</i>
 											</button>
 										</a>
@@ -146,4 +147,11 @@
 		</form>
 	</div>
 </body>
+<script>
+	var app = angular.module('Register', []);
+
+	app.controller('register', function($scope, $http) {
+
+	});
+</script>
 </html>

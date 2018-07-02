@@ -7,7 +7,7 @@
 <% include loading.ejs %>
 <body class="login_back">
 	<div class="container">
-		<form action="">
+		<form action="/user_db/login" method="post">
 			<div class="row login_row">
 				<div class="col s3 m2 l3 xl3"></div>
 				<div class="col s4 m6 l4 xl4">
@@ -21,7 +21,7 @@
 								<div class="col s10">
 									<div class="input-field col s12">
 										<i class="material-icons prefix">face</i>
-										<input id="text" type="text" class="text_fields" style="font-weight: bold;">
+										<input id="text" name="username" type="text" class="text_fields" style="font-weight: bold;">
 										<label for="text" class="login_font">Username</label>
 									</div>
 								</div>
@@ -32,7 +32,7 @@
 								<div class="col s10">
 									<div class="input-field col s12">
 										<i class="material-icons prefix">lock</i>
-										<input id="password" type="password">
+										<input id="password" name="password" type="password">
 										<label for="password" class="login_font">Password</label>
 									</div>
 								</div>
@@ -42,13 +42,13 @@
 								<div class="col s3 m2 l3 xl3"></div>
 								<div class="col s8 m8 l8 xl8">
 									<div class=" hvr-icon-wobble-vertical">
-										<button class="btn waves-effect waves-light hvr-icon" type="submit" name="submit">Submit
+										<button class="btn waves-effect waves-light hvr-icon" type="submit">Submit
 											<i class="material-icons right hvr-icon">send</i>
 										</button>&nbsp;&nbsp;&nbsp;
 									</div>
 									<div class=" hvr-icon-wobble-vertical">
 										<a href="/">
-											<button class="btn waves-effect waves-light red hvr-icon" type="reset" name="reset">Cancel
+											<button class="btn waves-effect waves-light red hvr-icon" type="reset">Cancel
 												<i class="material-icons right hvr-icon">close</i>
 											</button>
 										</a>
