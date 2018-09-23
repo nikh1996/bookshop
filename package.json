@@ -17,7 +17,21 @@
     "http-errors": "~1.6.2",
     "joi": "^13.6.0",
     "mongoose": "^5.1.7",
-    "morgan": "~1.9.0",
-    "nodemon": "^1.17.5"
-  }
+    "morgan": "~1.9.0"
+  },
+  "description": "A bookshop \"app\" made with MEAN (mongodb/mysql, express, angular, node)",
+  "main": "app.js",
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikh1996/bookshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikh1996/bookshop/issues"
+  },
+  "homepage": "https://github.com/nikh1996/bookshop#readme"
 }
