@@ -5,7 +5,7 @@
   "watch": "app.js",
   "scripts": {
     "preinstall": "npm i -g pm2",
-    "start": "pm2 start app.js",
+    "start": "node ./node_modules/.bin/pm2-runtime app.js -i max",
     "node": "nodemon app.js"
   },
   "dependencies": {
