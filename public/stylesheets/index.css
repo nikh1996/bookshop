@@ -1,8 +1,8 @@
 /*Index page*/
 
 .index_margin {
-  margin-top:15%;
-  margin-left:5%;
+  margin-top: 25vh;
+  margin-left: 5%;
 }
 
 .index_col_margin {
@@ -11,6 +11,8 @@
 
 .index_back {
   background: url('/images/index_land.jpg');
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -21,13 +23,14 @@
 
   .index_back {
     background: url('/images/index_por.jpg');
+    width: 100vw;
+    height: 100vh;
   }
 
 }
 
 @media only screen and (min-device-width: 1px) and (max-device-width: 767px) and (orientation:landscape) {
   .index_margin {
-    margin-top:5%;
     margin-left:5%;
   }
 
@@ -60,7 +63,6 @@
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 812px) and (orientation:landscape) {
   .index_margin {
-    margin-top:5%;
     margin-left:5%;
   }
 
@@ -95,6 +97,8 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 768px) and (orientation:portrait) {
   .index_back {
     background: url('/images/index_por.jpg');
+    width: 100vw;
+    height: 100vh;
   }
 
   .index_margin {
@@ -105,6 +109,8 @@
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation:portrait) {
   .index_back {
     background: url('/images/index_por.jpg');
+    width: 100vw;
+    height: 100vh;
   }
 
   .index_margin {
@@ -114,7 +120,6 @@
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation:landscape) {
   .index_margin {
-    margin-top:5%;
     margin-left:5%;
   }
 
@@ -151,7 +156,6 @@
 
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation:landscape) {
   .index_margin {
-    margin-top:5%;
     margin-left:5%;
   }
 

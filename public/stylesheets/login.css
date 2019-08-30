@@ -1,11 +1,13 @@
 /*Login page*/
 .login_back {
 	background: url('/images/login_land.jpg');
+	width: 100vw;
+	height: 100vh;
 	overflow: hidden; 
 }
 
 .login_row {
-	margin-top:22%;
+	margin-top: 25vh;
 }
 
 .row {
@@ -36,18 +38,24 @@ input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=p
 @media only screen and (min-device-width: 1px) and (max-device-width: 767px) and (orientation:portrait) {
 	.login_back {
 		background: url('/images/login_por.jpg');
+		width: 100vw;
+		height: 100vh;
 	}
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 768px) and (orientation:portrait) {
 	.login_back {
 		background: url('/images/login_por.jpg');
+		width: 100vw;
+		height: 100vh;
 	}
 }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation:portrait) {
 	.login_back {
 		background: url('/images/login_por.jpg');
+		width: 100vw;
+		height: 100vh;
 	}
 }
 
@@ -56,10 +64,6 @@ input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=p
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 812px) and (orientation:landscape) {
-	.login_row {
-		margin-top: 2%;
-	}
-
 	.circle_card {
 		width: 150px !important;
 		height: 150px !important;
@@ -72,10 +76,6 @@ input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=p
 }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation:landscape) {
-	.login_row {
-		margin-top: 5%;
-	}
-
 	.circle_card {
 		width: 150px !important;
 		height: 150px !important;
@@ -88,7 +88,5 @@ input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=p
 }
 
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation:landscape) {
-	.login_row {
-		margin-top:3%;
-	}
+	
 }

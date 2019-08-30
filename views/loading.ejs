@@ -1,7 +1,7 @@
 <body>
 	<div class="loading_div" id="loading">
 		<div class="loading_image">
-		<img id="loading-image" src="images/loading.gif" alt="Loading..." />
+		<img id="loading-image" src="/images/loading.gif" alt="Loading..." />
 		</div>
 	</div>
 </body>
@@ -10,7 +10,7 @@
 		$('a').click(function(e) {
 			e.preventDefault();
 			newLocation = this.href;
-			$('#loading').fadeIn('slow').delay(0, newpage);	
+			if(newLocation.indexOf('#') === -1) $('#loading').fadeIn('slow').delay(0, newpage);	
 		});
 
 		function newpage() {

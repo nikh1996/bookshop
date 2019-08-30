@@ -1,6 +1,8 @@
 /*Register page*/
 .reg_back {
 	background: url('/images/signup_land.jpg');
+	width: 100vw;
+	height: 100vh;
 }
 
 .card_pad {
@@ -29,6 +31,8 @@
 @media only screen and (min-device-width: 1px) and (max-device-width: 767px) and (orientation:portrait) {
 	.reg_back {
 		background: url('/images/signup_por.jpg');
+		width: 100vw;
+		height: 100vh;
 	}
 
 	.login_card {
@@ -39,6 +43,8 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 768px) and (orientation:portrait) {
 	.reg_back {
 		background: url('/images/signup_por.jpg');
+		width: 100vw;
+		height: 100vh;
 	}
 
 	.login_card {
@@ -49,6 +55,8 @@
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation:portrait) {
 	.reg_back {
 		background: url('/images/signup_por.jpg');
+		width: 100vw;
+		height: 100vh;
 	}
 
 	.login_card {

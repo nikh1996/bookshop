@@ -2,9 +2,17 @@ const express = require('express');
 const router = express.Router();
 const db = require('./db');
 const mongoose = require('mongoose');
+var session = require('express-session');
 const Joi = require('joi');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
+
+router.use(session({
+	secret: 'Mxyzptlk',
+	resave: false,
+	saveUninitialized: true,
+	cookie: { maxAge: 3600000 }
+}))
 
 const userSchema = new mongoose.Schema({
 	name: String,
@@ -80,6 +88,12 @@ router.post('/login', function(req, res, next) {
 	async function Login_user(){
 		try {
 			const getuser = await getUser();
+			const checkPassword = await checkPassword(getuser[0].password);
+			if(checkPassword=='Admin User') {
+				res.redirect('/admin/dashboard');
+			} else {
+				res.redirect('/login');
+			}
 		}
 		catch(err) {
 			res.send(err);
@@ -88,15 +102,15 @@ router.post('/login', function(req, res, next) {
 
 	async function getUser() {
 		let login_check = await User.find({ username: req.body.username });
-		if(login_check[0]){
-			checkPassword(login_check[0]);
+		if(login_check){
+			return login_check;
 		} else {
 			throw 'User does not exist';
 		}
 	}
 
 	async function checkPassword(userdetails) {
-		let login_password = userdetails.password;
+		let login_password = userdetails;
 		return new Promise((resolve, reject) => {
 			bcrypt.compare(req.body.password, login_password, function(err, res) {
 				if (err) {
@@ -105,9 +119,9 @@ router.post('/login', function(req, res, next) {
 					reject('Password does not match with the records...');
 				} else {
 					if(userdetails.isAdmin == true) {
-						console.log('Admin user');
+						resolve('Admin User');
 					} else {
-						console.log('Normal user');
+						resolve('Normal User');
 					}
 				}
 			});
