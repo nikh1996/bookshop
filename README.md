@@ -1,2 +1,2 @@
 # bookshop
-A bookshop "app" made with MEAN (mongodb/mysql, express, angular, node)
+A bookshop "app" made with MEAN (mongodb, express, angularjs, node)
